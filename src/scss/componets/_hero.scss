@@ -1,0 +1,80 @@
+.hero{
+    background-image: url(../img/hero/background-mobile.jpg);
+    background-position: center ;
+    background-size: cover;
+    height: 100vh;
+    
+    @extend %flex-center;
+    @media (min-resolution:2dppx ) , (min-resolution:192dpi) , (min-devace-pixel-radio:2) {
+        background-image: url(../img/hero/background-mobile@2x.jpg);
+        
+    }
+}
+
+.hero__container{
+    @extend %flex-center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hero__title{
+    font-size: 30px;
+   text-transform: uppercase;
+
+}
+
+.hero__text{
+    font-family: $fontsecondary;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+@media (min-width:768px) {
+
+    .hero__container{
+    gap: 35px;
+    }
+
+
+    .hero{
+        background-image: url(../../img/hero/background\ \ tablet.jpg);
+
+        @media (min-resolution:2dppx ) , (min-resolution:192dpi) , (min-devace-pixel-radio:2) {
+            background-image: url(../img/hero/background\ \ tablet\ 1@2x.jpg);
+            
+        }
+    }
+    
+    .hero__title{
+   font-size: 52px;
+    
+    }
+    
+    .hero__text{
+        font-size: 24px;
+    }
+    
+    
+}
+
+@media  (min-width:991px) {
+    .hero{
+        background-image: url(../img/hero/background\ desk.jpg);
+
+        @media (min-resolution:2dppx ) , (min-resolution:192dpi) , (min-devace-pixel-radio:2) {
+            background-image: url(../img/hero/background\ \ dest\ @2x.jpg);
+            
+        }
+    }
+}
+
+.hero__button{
+background-color: $colorBtn;
+transition-property: background-color ,color ;
+transition: 0.5s ease;
+&:hover{
+    background-color: $colorTextPrimary;
+    color: $colorBtn;
+   
+}
+}
